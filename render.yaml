@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: querylens-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: QUERY_TIMEOUT_SECONDS
+        value: "30"
+      - key: GEMINI_API_KEY
+        sync: false
+
