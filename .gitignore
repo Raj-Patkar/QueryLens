@@ -14,10 +14,11 @@ build/
 .venv/
 venv/
 env/
+tenv*/
 
-# ML model files (will be added intentionally later)
+# ML model files
 backend/models/*.joblib
-backend/models/*.pkl
+!backend/models/*.pkl
 
 # VS Code
 .vscode/
